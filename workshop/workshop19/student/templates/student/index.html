@@ -1,0 +1,13 @@
+{% extends "student/base.html" %}
+
+{% block bodyblock %}
+    <h1>여기는 인덱스 입니다.</h1>
+    {% for student in students %}
+        <h3>{{student.name}}</h3>
+        <!--<p>{{student.email}}</p>-->
+        <p>{{student.birthday}}</p>
+        <!--<p>{{student.age}}</p>-->
+        <a href="/student/{{student.id}}/">상세보기</a>
+        <hr>
+    {% endfor %}
+{% endblock %}
